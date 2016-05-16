@@ -1,10 +1,10 @@
 # iOSTermProject [미세먼지 주의보]
 
 각 지역별 미세먼지 농도를 확인하여 검색된 위치에 "매우나쁨~좋음" 등을 확인할수 있다.
-![Image01](https://lh6.ggpht.com/ieEiNpEHiNIzyQ7XOxzgbdAUYoYHXfzcIIa5mcyfPwySryPdEgwCpmsJZYhSIu6VaKY=h900-rw)
-![Image02](https://lh4.ggpht.com/iNiHTBLr4adTsi5XZxhn7IKR1cMjPk2UM4iCnFw92mooNKlw69z3K1Jk-tzhPrJvrsI=h900-rw)
+![Image01](https://lh3.googleusercontent.com/mjB11Bu3f_Tn-SfaiMLCGfGUpL7lT3AsCROh95AhinUnVnQrwNzEZxPDkl0-ihUXY-I=h900-rw)
+![Image02](https://lh3.googleusercontent.com/EcN5q1FUaDkOd6-GTb1Lep141WX-nVJGKdkWVOUwUY2Cx3eti5WguNmvbIHjjqz-xHl6=h900-rw)
 
-[이미지출처] https://play.google.com/store/apps/details?id=com.app.pm10
+[이미지출처] https://play.google.com/store/apps/details?id=cheehoon.ha.particulateforecaster
 
 ----------
 개발자
@@ -15,6 +15,7 @@
 ---------
 개발 환경
 ---------
++ OS X El Capitan
 + XCode 7.3
 + Swift
 + iOS 8.4 이상
@@ -29,9 +30,37 @@
 ---------
 구현 예정 내용
 ---------
-+ .
++ 대기오염 정보 조회 - 자신이 지정한 위치의 대기오염 정보를 조회 가능
++ 대기오염 통계 - 각 측정소의 농도 정보와 기간별 통계수치 정보 조회
++ 측정소 정보 조회 - 자신의 위치에서 TM좌표 기반의 가까운 측정소의 정보를 조회
++ 지번주소 조회 - 자신의 위치를 찾기 위한 각 시/도/군/읍/면/동 정보 조회
++ PM10, PM2.5 - 발생 원인, 예보, 등급 조회
+
+---------
+개발 일정
+---------
++ 1주차 ( 05/16 ~ 05/22 ) - View의 UI제작, 지번주소 조회 구현
++ 2주차 ( 05/23 ~ 05/29 ) - 대기오염 정보 조회 구현
++ 3주차 ( 05/30 ~ 06/05 ) - 대기오염 통계, 초 미세먼지, 미세먼지 조회
++ 4주차 ( 06/06 ~ 06/09 ) - 측정소 정보 조회
+
+---------
+역할 분담
+---------
++ **정택수 :**
+ 1. 사용자의 GPS얻기
+ 2. 초 미세먼지, 미세먼지 API 파싱
+
++ **권창현 :**
+ 1. 대기오염 정보 API 파싱
+ 2. 대기오염 통계 API 파싱
+
++ **공동 구현 :**
+ 1. 리소스 수집
+ 2. 지번주소 API 파싱
+ 3. 측정소 정보 API 파싱
 
 ---------
 Youtube 업로드 영상 & PPT 자료
 ---------
-+ .
++ [1차 발표 PPT](https://github.com/WindowsHyun/iOSProject/blob/master/Document/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%201%EC%B0%A8%20%EB%B0%9C%ED%91%9C.pptx?raw=true) / [1차 발표 영상](https://www.youtube.com/watch?v=7T7QmmTkiYM&feature=youtu.be)
