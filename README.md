@@ -64,3 +64,31 @@
 Youtube 업로드 영상 & PPT 자료
 ---------
 + [1차 발표 PPT](https://github.com/WindowsHyun/iOSProject/blob/master/Document/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%201%EC%B0%A8%20%EB%B0%9C%ED%91%9C.pptx?raw=true) / [1차 발표 영상](https://www.youtube.com/watch?v=7T7QmmTkiYM&feature=youtu.be)
+
+---------
+참고사항
+---------
+* 아이패드
+1. 스크린 사이즈
+– 세로 : 768 * 1024 px
+– 가로 : 1024 * 768 px
+2. 네비게이션바 / 툴바 : 높이 44 px
+3. 네비게이션바 버튼 / 툴바 버튼 : 높이 30 px
+4. 네비게이션바 버튼 이미지 / 툴바 버튼 이미지 : 20 * 20 px
+5. 탭바 : 높이 49 px
+6. 탭바 이미지 : 30 * 30 px
+
+
+앱 개발에 필요한 이미지 파일.
+
+72 X 72 png icon : 아이패드의 홈 화면에 표시할 앱 아이콘.
+50 X 50 png icon : 아이패드의 스포트라이트 검색 결과 화면에 표시되는 아이콘.
+29 X 29 png icon : iOS 설정화면에 표시될 아이콘. (옵션)
+64 X 64 and 320 X 320 png icon : 문서 유형을 등록하는 경우 필요. (옵션)
+768 X 1004 png image : 앱 실행 초기화면 이미지.(파일이름 아래 참고.)
+앱 실행 초기화면 이미지 파일명.
+
+Default-Portrait.png : 세로보기 화면
+Default-PortraitUpsideDown.png : 뒤집힌 세로보기. 없으면 Default-Portrait.png가 대체 (옵션)
+Default-Landscape.png : 가로보기 화면
+Default-LandscapeLeft.png, Default-LandscapeRight.png : 가로보기 화면에서 왼쪽, 오른쪽을 따로 표시해야할 경우. 없으면 Default-Landscape.png가 대체 (옵션)
