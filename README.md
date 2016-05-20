@@ -79,16 +79,17 @@ Youtube 업로드 영상 & PPT 자료
 6. 탭바 이미지 : 30 * 30 px
 
 
-앱 개발에 필요한 이미지 파일.
+앱 개발에 필요한 이미지 파일
 
-72 X 72 png icon : 아이패드의 홈 화면에 표시할 앱 아이콘.
-50 X 50 png icon : 아이패드의 스포트라이트 검색 결과 화면에 표시되는 아이콘.
-29 X 29 png icon : iOS 설정화면에 표시될 아이콘. (옵션)
-64 X 64 and 320 X 320 png icon : 문서 유형을 등록하는 경우 필요. (옵션)
-768 X 1004 png image : 앱 실행 초기화면 이미지.(파일이름 아래 참고.)
-앱 실행 초기화면 이미지 파일명.
+- 72 X 72 png icon : 아이패드의 홈 화면에 표시할 앱 아이콘.
+- 50 X 50 png icon : 아이패드의 스포트라이트 검색 결과 화면에 표시되는 아이콘.
+- 29 X 29 png icon : iOS 설정화면에 표시될 아이콘. (옵션)
+- 64 X 64 and 320 X 320 png icon : 문서 유형을 등록하는 경우 필요. (옵션)
+- 768 X 1004 png image : 앱 실행 초기화면 이미지.(파일이름 아래 참고.)
+- 앱 실행 초기화면 이미지 파일명.
 
-Default-Portrait.png : 세로보기 화면
-Default-PortraitUpsideDown.png : 뒤집힌 세로보기. 없으면 Default-Portrait.png가 대체 (옵션)
-Default-Landscape.png : 가로보기 화면
-Default-LandscapeLeft.png, Default-LandscapeRight.png : 가로보기 화면에서 왼쪽, 오른쪽을 따로 표시해야할 경우. 없으면 Default-Landscape.png가 대체 (옵션)
+- Default-Portrait.png : 세로보기 화면
+- Default-PortraitUpsideDown.png : 뒤집힌 세로보기. 없으면 Default-Portrait.png가 대체 (옵션)
+- Default-Landscape.png : 가로보기 화면
+- Default-LandscapeLeft.png, Default-LandscapeRight.png : 가로보기 화면에서 왼쪽, 오른쪽을 따로 표시해야할 경우. 
+- 없으면 - - -Default-Landscape.png가 대체 (옵션)
