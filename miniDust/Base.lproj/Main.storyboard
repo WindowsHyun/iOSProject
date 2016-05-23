@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Players-->
@@ -48,11 +49,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Infomation.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-7L-mXg">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="975"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Infomation.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-7L-mXg">
+                                <rect key="frame" x="0.0" y="10" width="768" height="1004"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qr8-7L-mXg" secondAttribute="trailing" constant="-20" id="57l-LC-p0y"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="centerY" secondItem="vQp-hI-TuX" secondAttribute="centerY" id="Kwv-k7-zbE"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="leading" secondItem="vQp-hI-TuX" secondAttribute="leadingMargin" constant="-20" id="OQj-bL-ksX"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Qr8-7L-mXg" secondAttribute="bottom" constant="10" id="UbN-NZ-1ck"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="top" secondItem="vQp-hI-TuX" secondAttribute="topMargin" constant="10" id="dF0-jU-Ug5"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="정보" image="Info30x30.png" id="SYA-qf-Cfs"/>
                 </viewController>

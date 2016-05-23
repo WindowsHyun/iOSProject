@@ -169,7 +169,7 @@
 		A1828E121CBCEF3E00D28198 = {
 			isa = PBXGroup;
 			children = (
-				A1828E1D1CBCEF3E00D28198 /* Ratings */,
+				A1828E1D1CBCEF3E00D28198 /* miniDust */,
 				A1828E1C1CBCEF3E00D28198 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1828E1D1CBCEF3E00D28198 /* Ratings */ = {
+		A1828E1D1CBCEF3E00D28198 /* miniDust */ = {
 			isa = PBXGroup;
 			children = (
 				A122C9771CEF647E0001705C /* Image */,
@@ -193,15 +193,15 @@
 				A1828E271CBCEF3E00D28198 /* LaunchScreen.storyboard */,
 				A1828E2A1CBCEF3E00D28198 /* Info.plist */,
 			);
-			path = Ratings;
+			path = miniDust;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A1828E1A1CBCEF3E00D28198 /* Ratings */ = {
+		A1828E1A1CBCEF3E00D28198 /* miniDust */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1828E2D1CBCEF3E00D28198 /* Build configuration list for PBXNativeTarget "Ratings" */;
+			buildConfigurationList = A1828E2D1CBCEF3E00D28198 /* Build configuration list for PBXNativeTarget "miniDust" */;
 			buildPhases = (
 				A1828E171CBCEF3E00D28198 /* Sources */,
 				A1828E181CBCEF3E00D28198 /* Frameworks */,
@@ -211,7 +211,7 @@
 			);
 			dependencies = (
 			);
-			name = Ratings;
+			name = miniDust;
 			productName = Ratings;
 			productReference = A1828E1B1CBCEF3E00D28198 /* miniDust.app */;
 			productType = "com.apple.product-type.application";
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1828E161CBCEF3E00D28198 /* Build configuration list for PBXProject "Ratings" */;
+			buildConfigurationList = A1828E161CBCEF3E00D28198 /* Build configuration list for PBXProject "miniDust" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A1828E1A1CBCEF3E00D28198 /* Ratings */,
+				A1828E1A1CBCEF3E00D28198 /* miniDust */,
 			);
 		};
 /* End PBXProject section */
@@ -417,11 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Ratings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/miniDust/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = miniDust;
 				PRODUCT_NAME = miniDust;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -429,18 +430,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Ratings/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/miniDust/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = miniDust;
 				PRODUCT_NAME = miniDust;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1828E161CBCEF3E00D28198 /* Build configuration list for PBXProject "Ratings" */ = {
+		A1828E161CBCEF3E00D28198 /* Build configuration list for PBXProject "miniDust" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1828E2B1CBCEF3E00D28198 /* Debug */,
@@ -449,7 +451,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1828E2D1CBCEF3E00D28198 /* Build configuration list for PBXNativeTarget "Ratings" */ = {
+		A1828E2D1CBCEF3E00D28198 /* Build configuration list for PBXNativeTarget "miniDust" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1828E2E1CBCEF3E00D28198 /* Debug */,
