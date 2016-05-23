@@ -6,37 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Players-->
-        <scene sceneID="QaD-Pt-THB">
-            <objects>
-                <tableViewController title="Players" id="fs7-fM-74u" customClass="PlayerViewController" customModule="miniDust" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHC-V9-d8y">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="60" id="nZa-bl-GbM" customClass="PlayerCell" customModule="miniDust" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="768" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nZa-bl-GbM" id="EhJ-Y9-RMw">
-                                    <rect key="frame" x="0.0" y="0.0" width="682" height="59.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fs7-fM-74u" id="1Rj-o9-TNF"/>
-                            <outlet property="delegate" destination="fs7-fM-74u" id="am2-E2-NPW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="위치조회" id="5OP-6S-FRa">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pdH-BQ-dyx"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJY-LJ-kP3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="320" y="-879"/>
-        </scene>
         <!--정보-->
         <scene sceneID="8aq-Af-mRS">
             <objects>
@@ -46,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iI7-Fj-dgC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vQp-hI-TuX">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Infomation.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-7L-mXg">
-                                <rect key="frame" x="0.0" y="10" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="10" width="600" height="580"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,14 +35,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjI-eK-wQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="212"/>
+            <point key="canvasLocation" x="-764" y="46"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Awk-Il-UTp">
             <objects>
                 <tabBarController id="ZPI-EA-imY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5il-0s-pcl"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ZCc-3Z-XD7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -101,12 +69,56 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="fs7-fM-74u" kind="relationship" relationship="rootViewController" id="Coq-LX-8cn"/>
+                        <segue destination="0SC-g5-d0M" kind="relationship" relationship="rootViewController" id="sk2-gb-GrZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLi-Ak-5dG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-540" y="-897"/>
+            <point key="canvasLocation" x="-1624" y="-715"/>
+        </scene>
+        <!--위치 조회-->
+        <scene sceneID="LRS-eX-8xl">
+            <objects>
+                <viewController title="위치 조회" id="0SC-g5-d0M" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9z-e6-d8Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tr6-Cg-QCC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5q3-Ke-oTl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T4i-Ma-JGv">
+                                <rect key="frame" x="0.0" y="212" width="600" height="238"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="1oJ-wv-buJ" style="IBUITableViewCellStyleDefault" id="UKi-oL-8VE">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKi-oL-8VE" id="fy3-YL-Fp3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="테스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1oJ-wv-buJ">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="위치 조회" id="Pa8-dY-n0o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KhQ-OE-Z5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-869" y="-715"/>
         </scene>
         <!--초미세먼지-->
         <scene sceneID="tbP-p6-OGS">
@@ -125,7 +137,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRf-WF-QNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1584" y="1339"/>
+            <point key="canvasLocation" x="-1624" y="823"/>
         </scene>
         <!--초미세먼지 예보-->
         <scene sceneID="vHL-cb-tq2">
@@ -136,7 +148,7 @@
                         <viewControllerLayoutGuide type="bottom" id="N9G-UU-gvh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RF3-Wn-CEF">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-pZ-mbL">
@@ -148,11 +160,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="초미세먼지 예보" id="Yrx-4b-Piz"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czb-f2-tfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-670" y="1339"/>
+            <point key="canvasLocation" x="-898" y="823"/>
         </scene>
     </scenes>
     <resources>
@@ -161,4 +172,5 @@
         <image name="Infomation.png" width="768" height="1004"/>
         <image name="Search20x20.png" width="20" height="20"/>
     </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
