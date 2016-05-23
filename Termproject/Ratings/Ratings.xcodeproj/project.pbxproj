@@ -11,10 +11,6 @@
 		A11808EB1CEF8D7200FFA3EA /* Dust20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808E81CEF8D7200FFA3EA /* Dust20x20.png */; };
 		A11808EC1CEF8D7200FFA3EA /* Dust30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808E91CEF8D7200FFA3EA /* Dust30x30.png */; };
 		A11808F21CEF929000FFA3EA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808F11CEF929000FFA3EA /* Default.png */; };
-		A11AD4541CD220A800AA688B /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11AD4501CD220A700AA688B /* CustomScrollViewController.swift */; };
-		A11AD4551CD220A800AA688B /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11AD4511CD220A800AA688B /* PagedScrollViewController.swift */; };
-		A11AD4561CD220A800AA688B /* PeekPagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11AD4521CD220A800AA688B /* PeekPagedScrollViewController.swift */; };
-		A11AD4571CD220A800AA688B /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11AD4531CD220A800AA688B /* ScrollViewContainer.swift */; };
 		A11AD45E1CD2214300AA688B /* photo5.png in Resources */ = {isa = PBXBuildFile; fileRef = A11AD4581CD2214300AA688B /* photo5.png */; };
 		A11AD45F1CD2214300AA688B /* photo4.png in Resources */ = {isa = PBXBuildFile; fileRef = A11AD4591CD2214300AA688B /* photo4.png */; };
 		A11AD4601CD2214300AA688B /* photo3.png in Resources */ = {isa = PBXBuildFile; fileRef = A11AD45A1CD2214300AA688B /* photo3.png */; };
@@ -45,11 +41,6 @@
 		A1828E241CBCEF3E00D28198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1828E221CBCEF3E00D28198 /* Main.storyboard */; };
 		A1828E261CBCEF3E00D28198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1828E251CBCEF3E00D28198 /* Assets.xcassets */; };
 		A1828E291CBCEF3E00D28198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1828E271CBCEF3E00D28198 /* LaunchScreen.storyboard */; };
-		A1828E311CBCF76F00D28198 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1828E301CBCF76F00D28198 /* PlayerViewController.swift */; };
-		A1828E331CBCF7D700D28198 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1828E321CBCF7D700D28198 /* Player.swift */; };
-		A1828E351CBCF92200D28198 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1828E341CBCF92200D28198 /* SampleData.swift */; };
-		A1E333761CC62B790002AD3F /* GamePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E333751CC62B790002AD3F /* GamePickerViewController.swift */; };
-		A1E333781CC6361A0002AD3F /* StarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E333771CC6361A0002AD3F /* StarPickerViewController.swift */; };
 		A1E333AA1CC672280002AD3F /* 2Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333A51CC672280002AD3F /* 2Stars.png */; };
 		A1E333AB1CC672280002AD3F /* 3Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333A61CC672280002AD3F /* 3Stars.png */; };
 		A1E333AC1CC672280002AD3F /* 4Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333A71CC672280002AD3F /* 4Stars.png */; };
@@ -57,8 +48,6 @@
 		A1E333AE1CC672280002AD3F /* 1Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333A91CC672280002AD3F /* 1Stars.png */; };
 		A1E333B01CC68A1B0002AD3F /* Gestures.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333AF1CC68A1B0002AD3F /* Gestures.png */; };
 		A1E333B21CC68A220002AD3F /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = A1E333B11CC68A220002AD3F /* Players.png */; };
-		A1E5348E1CBFA61C003AA326 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5348D1CBFA61C003AA326 /* PlayerCell.swift */; };
-		A1E534931CBFAF77003AA326 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E534921CBFAF77003AA326 /* PlayerDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,10 +55,6 @@
 		A11808E81CEF8D7200FFA3EA /* Dust20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dust20x20.png; sourceTree = "<group>"; };
 		A11808E91CEF8D7200FFA3EA /* Dust30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dust30x30.png; sourceTree = "<group>"; };
 		A11808F11CEF929000FFA3EA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		A11AD4501CD220A700AA688B /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
-		A11AD4511CD220A800AA688B /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
-		A11AD4521CD220A800AA688B /* PeekPagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPagedScrollViewController.swift; sourceTree = "<group>"; };
-		A11AD4531CD220A800AA688B /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 		A11AD4581CD2214300AA688B /* photo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo5.png; sourceTree = "<group>"; };
 		A11AD4591CD2214300AA688B /* photo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo4.png; sourceTree = "<group>"; };
 		A11AD45A1CD2214300AA688B /* photo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo3.png; sourceTree = "<group>"; };
@@ -95,18 +80,13 @@
 		A122C9911CEF7BC00001705C /* Search20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search20x20.png; sourceTree = "<group>"; };
 		A122C9921CEF7BC00001705C /* Search30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search30x30.png; sourceTree = "<group>"; };
 		A13AE96E1CEF7F4C00DDAF00 /* Infomation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Infomation.png; sourceTree = "<group>"; };
-		A1828E1B1CBCEF3E00D28198 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1828E1B1CBCEF3E00D28198 /* miniDust.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniDust.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1828E1E1CBCEF3E00D28198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1828E201CBCEF3E00D28198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1828E231CBCEF3E00D28198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1828E251CBCEF3E00D28198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1828E281CBCEF3E00D28198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1828E2A1CBCEF3E00D28198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A1828E301CBCF76F00D28198 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		A1828E321CBCF7D700D28198 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		A1828E341CBCF92200D28198 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
-		A1E333751CC62B790002AD3F /* GamePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePickerViewController.swift; sourceTree = "<group>"; };
-		A1E333771CC6361A0002AD3F /* StarPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarPickerViewController.swift; sourceTree = "<group>"; };
 		A1E333A51CC672280002AD3F /* 2Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2Stars.png; sourceTree = "<group>"; };
 		A1E333A61CC672280002AD3F /* 3Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3Stars.png; sourceTree = "<group>"; };
 		A1E333A71CC672280002AD3F /* 4Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4Stars.png; sourceTree = "<group>"; };
@@ -114,8 +94,6 @@
 		A1E333A91CC672280002AD3F /* 1Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Stars.png; sourceTree = "<group>"; };
 		A1E333AF1CC68A1B0002AD3F /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gestures.png; path = Images/Gestures.imageset/Gestures.png; sourceTree = "<group>"; };
 		A1E333B11CC68A220002AD3F /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Players.png; path = Images/Players.imageset/Players.png; sourceTree = "<group>"; };
-		A1E5348D1CBFA61C003AA326 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
-		A1E534921CBFAF77003AA326 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +177,7 @@
 		A1828E1C1CBCEF3E00D28198 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1828E1B1CBCEF3E00D28198 /* test.app */,
+				A1828E1B1CBCEF3E00D28198 /* miniDust.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,23 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				A122C9771CEF647E0001705C /* Image */,
-				A11AD4501CD220A700AA688B /* CustomScrollViewController.swift */,
-				A11AD4511CD220A800AA688B /* PagedScrollViewController.swift */,
-				A11AD4521CD220A800AA688B /* PeekPagedScrollViewController.swift */,
-				A11AD4531CD220A800AA688B /* ScrollViewContainer.swift */,
 				A1828E1E1CBCEF3E00D28198 /* AppDelegate.swift */,
 				A1828E201CBCEF3E00D28198 /* ViewController.swift */,
 				A1828E221CBCEF3E00D28198 /* Main.storyboard */,
 				A1828E251CBCEF3E00D28198 /* Assets.xcassets */,
 				A1828E271CBCEF3E00D28198 /* LaunchScreen.storyboard */,
 				A1828E2A1CBCEF3E00D28198 /* Info.plist */,
-				A1828E301CBCF76F00D28198 /* PlayerViewController.swift */,
-				A1828E321CBCF7D700D28198 /* Player.swift */,
-				A1828E341CBCF92200D28198 /* SampleData.swift */,
-				A1E5348D1CBFA61C003AA326 /* PlayerCell.swift */,
-				A1E534921CBFAF77003AA326 /* PlayerDetailsViewController.swift */,
-				A1E333751CC62B790002AD3F /* GamePickerViewController.swift */,
-				A1E333771CC6361A0002AD3F /* StarPickerViewController.swift */,
 			);
 			path = Ratings;
 			sourceTree = "<group>";
@@ -246,7 +213,7 @@
 			);
 			name = Ratings;
 			productName = Ratings;
-			productReference = A1828E1B1CBCEF3E00D28198 /* test.app */;
+			productReference = A1828E1B1CBCEF3E00D28198 /* miniDust.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,19 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E333761CC62B790002AD3F /* GamePickerViewController.swift in Sources */,
-				A1E5348E1CBFA61C003AA326 /* PlayerCell.swift in Sources */,
-				A11AD4561CD220A800AA688B /* PeekPagedScrollViewController.swift in Sources */,
-				A1828E331CBCF7D700D28198 /* Player.swift in Sources */,
 				A1828E211CBCEF3E00D28198 /* ViewController.swift in Sources */,
-				A11AD4541CD220A800AA688B /* CustomScrollViewController.swift in Sources */,
-				A11AD4551CD220A800AA688B /* PagedScrollViewController.swift in Sources */,
-				A1E534931CBFAF77003AA326 /* PlayerDetailsViewController.swift in Sources */,
-				A1E333781CC6361A0002AD3F /* StarPickerViewController.swift in Sources */,
 				A1828E1F1CBCEF3E00D28198 /* AppDelegate.swift in Sources */,
-				A1828E351CBCF92200D28198 /* SampleData.swift in Sources */,
-				A11AD4571CD220A800AA688B /* ScrollViewContainer.swift in Sources */,
-				A1828E311CBCF76F00D28198 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,8 +419,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ratings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test;
-				PRODUCT_NAME = test;
+				PRODUCT_BUNDLE_IDENTIFIER = miniDust;
+				PRODUCT_NAME = miniDust;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -475,8 +431,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Ratings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = test;
-				PRODUCT_NAME = test;
+				PRODUCT_BUNDLE_IDENTIFIER = miniDust;
+				PRODUCT_NAME = miniDust;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
