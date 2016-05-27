@@ -104,6 +104,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return imageView
     }
     
+
+
+    
+    
     func scrollViewDidZoom(scrollView: UIScrollView){
         centerScrollViewContents()
     }
