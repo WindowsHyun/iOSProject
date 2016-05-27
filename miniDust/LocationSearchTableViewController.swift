@@ -19,13 +19,7 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
-    
-    var ratings:[String] = [
-        "한글",
-        "이정",
-        "상적",
-        "으로",
-        "된다"]
+    var send = myLocation()
     
     func beginParsing(){
         posts = []
@@ -68,12 +62,37 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
         return posts.count
     }
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DataCell", forIndexPath: indexPath)
         cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String
+        
+
         return cell
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        //테이블뷰 선택이 되었을때 나타나는 행동
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+        let listText = "\(cell?.textLabel?.text as! NSString as String)"
+        //print("선택한 위치는(List 선택 값) : \(listText)")
+        //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
+        send.FirstLocation = "\(listText)"
+        print(send.FirstLocation)
+        
+        
+
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // 오류 아직 미해결...
+        // 데이터를 받은경우 그 데이터를 미세먼지 조회 레이블에 전달을 하게 하려 한다.
+        // 하지만 그방법이 제대로 구현되지 않는다.
+        var destViewController : miniDustViewController = segue.destinationViewController as! miniDustViewController
+        destViewController.firstLocation = send.FirstLocation
+    }
     
     
     override func viewDidLoad() {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C8E93B91CF8A5C600E6919B /* FunctionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E93B81CF8A5C600E6919B /* FunctionData.swift */; };
 		7C8E93C01CF8AB1200E6919B /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E93BF1CF8AB1200E6919B /* LocationSearchTableViewController.swift */; };
+		7C8E93C91CF8D48200E6919B /* miniDustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E93C81CF8D48200E6919B /* miniDustViewController.swift */; };
 		A11808EA1CEF8D7200FFA3EA /* Dust.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808E71CEF8D7200FFA3EA /* Dust.png */; };
 		A11808EB1CEF8D7200FFA3EA /* Dust20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808E81CEF8D7200FFA3EA /* Dust20x20.png */; };
 		A11808EC1CEF8D7200FFA3EA /* Dust30x30.png in Resources */ = {isa = PBXBuildFile; fileRef = A11808E91CEF8D7200FFA3EA /* Dust30x30.png */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		7C8E93B81CF8A5C600E6919B /* FunctionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionData.swift; sourceTree = "<group>"; };
 		7C8E93BF1CF8AB1200E6919B /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		7C8E93C81CF8D48200E6919B /* miniDustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = miniDustViewController.swift; sourceTree = "<group>"; };
 		A11808E71CEF8D7200FFA3EA /* Dust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dust.png; sourceTree = "<group>"; };
 		A11808E81CEF8D7200FFA3EA /* Dust20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dust20x20.png; sourceTree = "<group>"; };
 		A11808E91CEF8D7200FFA3EA /* Dust30x30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dust30x30.png; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				A1828E2A1CBCEF3E00D28198 /* Info.plist */,
 				7C8E93B81CF8A5C600E6919B /* FunctionData.swift */,
 				7C8E93BF1CF8AB1200E6919B /* LocationSearchTableViewController.swift */,
+				7C8E93C81CF8D48200E6919B /* miniDustViewController.swift */,
 			);
 			path = miniDust;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8E93C91CF8D48200E6919B /* miniDustViewController.swift in Sources */,
 				7C8E93C01CF8AB1200E6919B /* LocationSearchTableViewController.swift in Sources */,
 				A1828E211CBCEF3E00D28198 /* ViewController.swift in Sources */,
 				7C8E93B91CF8A5C600E6919B /* FunctionData.swift in Sources */,
@@ -428,6 +432,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/miniDust/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = miniDust;
 				PRODUCT_NAME = miniDust;
 				TARGETED_DEVICE_FAMILY = "1,2";

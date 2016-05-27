@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //1. photo1.png로 부터 이미지뷰를 생성(파일이 없으면 crash!)
         //이미지 프레임(크기, 위치)설정한 후 scrollView의 subView로 추가함
         let image = UIImage(named: "photo1.png")!
