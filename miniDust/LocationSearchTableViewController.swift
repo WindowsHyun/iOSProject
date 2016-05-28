@@ -26,7 +26,7 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
         parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://openapi.epost.go.kr/postal/retrieveLotNumberAdressService/retrieveLotNumberAdressService/getBorodCityList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&numOfRows=999&pageSize=999&pageNo=1&startPage=1"))!)!
         parser.delegate = self
         parser.parse()
-        //tbData!.reloadData()
+        print(posts.count)
     }
     
     func parser(parser:NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?,
