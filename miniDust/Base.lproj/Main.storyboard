@@ -102,7 +102,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DuQ-SI-XbA" kind="show" id="fPM-zj-JgS"/>
+                                    <segue destination="DuQ-SI-XbA" kind="show" identifier="nextView" id="nvs-6n-6Wv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -117,24 +117,24 @@
             </objects>
             <point key="canvasLocation" x="-920" y="-715"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Second Table View Controller-->
         <scene sceneID="EXA-oX-9m9">
             <objects>
-                <tableViewController id="DuQ-SI-XbA" sceneMemberID="viewController">
+                <tableViewController id="DuQ-SI-XbA" customClass="SecondTableViewController" customModule="miniDust" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jHJ-ES-2OH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mdu-gx-GT0" style="IBUITableViewCellStyleDefault" id="VMn-nu-CWm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DataCell" textLabel="mdu-gx-GT0" style="IBUITableViewCellStyleDefault" id="VMn-nu-CWm">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VMn-nu-CWm" id="ljQ-Rn-7Jr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mdu-gx-GT0">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNL-Sk-nFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-216" y="-721"/>
+            <point key="canvasLocation" x="-214" y="-715"/>
         </scene>
         <!--초미세먼지-->
         <scene sceneID="tbP-p6-OGS">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czb-f2-tfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="823"/>
+            <point key="canvasLocation" x="-900" y="823"/>
         </scene>
     </scenes>
     <resources>

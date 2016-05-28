@@ -8,7 +8,11 @@
 
 import Foundation
 
-
 struct myLocation {
-    var FirstLocation = ""
+    static var FirstLocation = ""
+}
+
+func UTF8Encode(name: String) -> String {
+    
+    return name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
 }
