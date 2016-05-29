@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -194,22 +194,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="Test"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77f-FW-7r5">
-                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재위치 : 경기도 시흥시 정왕동" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-rE-VWY">
+                                <rect key="frame" x="112" y="64" width="376" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-05-29 06:16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-2i-uvA">
+                                <rect key="frame" x="215.5" y="115" width="169" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="77f-FW-7r5" firstAttribute="centerY" secondItem="RF3-Wn-CEF" secondAttribute="centerY" id="61R-PV-hmX"/>
-                            <constraint firstItem="77f-FW-7r5" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="Cju-RN-n9I"/>
+                            <constraint firstItem="U47-rE-VWY" firstAttribute="top" secondItem="62m-Ya-RbA" secondAttribute="bottom" id="Isk-7g-nWS"/>
+                            <constraint firstItem="gdB-2i-uvA" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="iTl-Fy-f2v"/>
+                            <constraint firstItem="gdB-2i-uvA" firstAttribute="top" secondItem="U47-rE-VWY" secondAttribute="bottom" constant="15" id="seU-f8-zp6"/>
+                            <constraint firstItem="U47-rE-VWY" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="uS4-6L-2Gu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="초미세먼지 예보" id="Yrx-4b-Piz"/>
                     <connections>
-                        <outlet property="myLabel" destination="77f-FW-7r5" id="ri8-kZ-lhF"/>
+                        <outlet property="dataTime" destination="gdB-2i-uvA" id="c5c-GU-lzW"/>
+                        <outlet property="myLocation" destination="U47-rE-VWY" id="NMC-Tx-u0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czb-f2-tfV" userLabel="First Responder" sceneMemberID="firstResponder"/>

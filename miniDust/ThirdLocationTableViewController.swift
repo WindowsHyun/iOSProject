@@ -94,7 +94,8 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
         LocationData.ThirdLocation = thirdLocationData
         //self.performSegueWithIdentifier("nextView", sender: self)
     }
-
+/*
+     싱글톤 함수로 인하여 segue가 필요 없어짐.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "nextView"{
             let param = segue.destinationViewController as! miniDustViewController
@@ -104,7 +105,7 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
             param.thirdLocationData = thirdLocationData
         }
     }
-    
+  */
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
