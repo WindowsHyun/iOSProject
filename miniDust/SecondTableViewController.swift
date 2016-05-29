@@ -9,10 +9,7 @@
 import UIKit
 
 class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     
     @IBOutlet weak var tbData: UITableView!
     // xml 파일을 다운로드 및 파싱하는 오브젝트
@@ -20,6 +17,8 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
     // feed 데이터를 저장하는 mutable array
     var posts = NSMutableArray()
     // title과 date 같은 feed데이터를 저장하는 mutable dictionary
+    let LocationData = MyLocation.sharedInstance
+    // 싱글톤으로 제작하여 모든 스위프트에서 단일 변수로 만들기
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
@@ -28,10 +27,7 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
     var secondLocationData = ""
     var encodeFirst:String = ""
     
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
     
     func beginParsing(){
         posts = []
@@ -93,6 +89,7 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         secondLocationData = "\(listText)"
         print(secondLocationData)
+        LocationData.SecondLocation = secondLocationData
         self.performSegueWithIdentifier("nextView", sender: self)
     }
 

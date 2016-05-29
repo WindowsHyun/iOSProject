@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
->>>>>>> origin/master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -39,11 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjI-eK-wQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-1624" y="-1436"/>
-=======
-            <point key="canvasLocation" x="-764" y="46"/>
->>>>>>> origin/master
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Awk-Il-UTp">
@@ -57,21 +49,15 @@
                     </tabBar>
                     <connections>
                         <segue destination="oeL-9e-6o3" kind="relationship" relationship="viewControllers" id="eeq-Kp-ZTG"/>
+                        <segue destination="50V-59-ENW" kind="relationship" relationship="viewControllers" id="M1B-dM-eEm"/>
                         <segue destination="8S1-8a-sLU" kind="relationship" relationship="viewControllers" id="2VF-Jk-rcY"/>
-<<<<<<< HEAD
                         <segue destination="CfG-mv-fbt" kind="relationship" relationship="viewControllers" id="Q4H-GY-RAM"/>
-=======
->>>>>>> origin/master
                         <segue destination="wNz-wc-xCG" kind="relationship" relationship="viewControllers" id="nGw-vs-hhQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNP-XT-Gul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="-1608" y="46"/>
-=======
-            <point key="canvasLocation" x="-1624" y="46"/>
->>>>>>> origin/master
         </scene>
         <!--위치조회-->
         <scene sceneID="286-kh-SSv">
@@ -173,11 +159,11 @@
             </objects>
             <point key="canvasLocation" x="-260" y="-715"/>
         </scene>
-        <!--초미세먼지-->
+        <!--초미세먼지 예보-->
         <scene sceneID="tbP-p6-OGS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8S1-8a-sLU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="초미세먼지" image="Dust30x30.png" id="84h-Sg-J5y"/>
+                <navigationController title="초미세먼지 예보" automaticallyAdjustsScrollViewInsets="NO" id="8S1-8a-sLU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="초미세먼지 예보" image="Dust30x30.png" id="84h-Sg-J5y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u4k-3t-2sj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -190,7 +176,43 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRf-WF-QNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1624" y="823"/>
+            <point key="canvasLocation" x="-974" y="801"/>
+        </scene>
+        <!--미세먼지 예보-->
+        <scene sceneID="RpT-jD-Ssa">
+            <objects>
+                <viewController title="미세먼지 예보" id="S7H-vv-TX1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2eh-ch-s8t"/>
+                        <viewControllerLayoutGuide type="bottom" id="ail-j3-g3k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQw-zl-vuM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="미세먼지 예보" id="LN9-Jc-vGQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUk-d6-tYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1012" y="1505"/>
+        </scene>
+        <!--미세먼지 예보-->
+        <scene sceneID="aSg-Zp-xYx">
+            <objects>
+                <navigationController title="미세먼지 예보" id="50V-59-ENW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="미세먼지 예보" image="Align30x30.png" id="KBf-Vv-tJ3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2bd-sB-eTR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S7H-vv-TX1" kind="relationship" relationship="rootViewController" id="1n3-tJ-Lyl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypc-an-vYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1740" y="1505"/>
         </scene>
         <!--초미세먼지 예보-->
         <scene sceneID="vHL-cb-tq2">
@@ -209,27 +231,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <state key="normal" title="Test"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77f-FW-7r5">
-                                <rect key="frame" x="279" y="289.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재위치 : 경기도 시흥시 정왕동" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-rE-VWY">
+                                <rect key="frame" x="112" y="64" width="376" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-05-29 06:16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-2i-uvA">
+                                <rect key="frame" x="215.5" y="115" width="169" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="77f-FW-7r5" firstAttribute="centerY" secondItem="RF3-Wn-CEF" secondAttribute="centerY" id="61R-PV-hmX"/>
-                            <constraint firstItem="77f-FW-7r5" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="Cju-RN-n9I"/>
+                            <constraint firstItem="U47-rE-VWY" firstAttribute="top" secondItem="62m-Ya-RbA" secondAttribute="bottom" id="Isk-7g-nWS"/>
+                            <constraint firstItem="gdB-2i-uvA" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="iTl-Fy-f2v"/>
+                            <constraint firstItem="gdB-2i-uvA" firstAttribute="top" secondItem="U47-rE-VWY" secondAttribute="bottom" constant="15" id="seU-f8-zp6"/>
+                            <constraint firstItem="U47-rE-VWY" firstAttribute="centerX" secondItem="RF3-Wn-CEF" secondAttribute="centerX" id="uS4-6L-2Gu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="초미세먼지 예보" id="Yrx-4b-Piz"/>
                     <connections>
-                        <outlet property="myLabel" destination="77f-FW-7r5" id="ri8-kZ-lhF"/>
+                        <outlet property="dataTime" destination="gdB-2i-uvA" id="c5c-GU-lzW"/>
+                        <outlet property="myLocation" destination="U47-rE-VWY" id="NMC-Tx-u0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czb-f2-tfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="823"/>
+            <point key="canvasLocation" x="-296" y="801"/>
         </scene>
         <!--Third Location Table View Controller-->
         <scene sceneID="6Ak-Dn-ZIk">
@@ -268,7 +299,6 @@
             </objects>
             <point key="canvasLocation" x="430" y="-715"/>
         </scene>
-<<<<<<< HEAD
         <!--지도-->
         <scene sceneID="xra-Cx-PpQ">
             <objects>
@@ -321,17 +351,13 @@
             </objects>
             <point key="canvasLocation" x="-802" y="46"/>
         </scene>
-=======
->>>>>>> origin/master
     </scenes>
     <resources>
+        <image name="Align30x30.png" width="30" height="29"/>
         <image name="Dust30x30.png" width="30" height="30"/>
         <image name="Info30x30.png" width="30" height="30"/>
         <image name="Infomation.png" width="768" height="1004"/>
-<<<<<<< HEAD
         <image name="Map-marker20x20.png" width="20" height="26"/>
-=======
->>>>>>> origin/master
         <image name="Search20x20.png" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

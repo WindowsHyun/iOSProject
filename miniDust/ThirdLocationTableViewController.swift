@@ -16,6 +16,8 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
     // feed 데이터를 저장하는 mutable array
     var posts = NSMutableArray()
     // title과 date 같은 feed데이터를 저장하는 mutable dictionary
+    let LocationData = MyLocation.sharedInstance
+    // 싱글톤으로 제작하여 모든 스위프트에서 단일 변수로 만들기
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
@@ -89,9 +91,11 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         thirdLocationData = "\(listText)"
         print("전체 선택 : " + firstLocationData + " " + secondLocationData + " " + thirdLocationData)
+        LocationData.ThirdLocation = thirdLocationData
         //self.performSegueWithIdentifier("nextView", sender: self)
     }
-
+/*
+     싱글톤 함수로 인하여 segue가 필요 없어짐.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "nextView"{
             let param = segue.destinationViewController as! miniDustViewController
@@ -101,7 +105,7 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
             param.thirdLocationData = thirdLocationData
         }
     }
-    
+  */
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
