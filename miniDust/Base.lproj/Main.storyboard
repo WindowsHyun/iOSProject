@@ -101,9 +101,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="DuQ-SI-XbA" kind="show" identifier="nextView" id="nvs-6n-6Wv"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -112,6 +109,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="위치 조회" id="YKE-yJ-WZz"/>
+                    <connections>
+                        <segue destination="DuQ-SI-XbA" kind="show" identifier="nextView" id="ANA-YS-Evt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwk-cK-QTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,10 +149,13 @@
                             <outlet property="delegate" destination="DuQ-SI-XbA" id="W5m-HY-dvE"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="FFO-sN-5Ge" kind="show" identifier="nextView" id="3D4-yi-bSW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNL-Sk-nFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214" y="-715"/>
+            <point key="canvasLocation" x="-260" y="-715"/>
         </scene>
         <!--초미세먼지-->
         <scene sceneID="tbP-p6-OGS">
@@ -210,7 +213,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czb-f2-tfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-900" y="823"/>
+            <point key="canvasLocation" x="-894" y="823"/>
+        </scene>
+        <!--Third Location Table View Controller-->
+        <scene sceneID="6Ak-Dn-ZIk">
+            <objects>
+                <tableViewController id="FFO-sN-5Ge" customClass="ThirdLocationTableViewController" customModule="miniDust" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mL2-QP-PeH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DataCell" textLabel="enC-JV-1ur" style="IBUITableViewCellStyleDefault" id="t0p-sh-MDn">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t0p-sh-MDn" id="oHn-kk-iCy">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="enC-JV-1ur">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FFO-sN-5Ge" id="Vb7-Q5-VU1"/>
+                            <outlet property="delegate" destination="FFO-sN-5Ge" id="O3i-CQ-BcF"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-nQ-34q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430" y="-715"/>
         </scene>
     </scenes>
     <resources>

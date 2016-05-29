@@ -27,9 +27,7 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
     
     func beginParsing(){
         posts = []
-        print("+" + firstLocationData)
         encodeFirst = UTF8Encode(firstLocationData)
-        print("-" + encodeFirst)
             parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://openapi.epost.go.kr/postal/retrieveLotNumberAdressService/retrieveLotNumberAdressService/getSiGunGuList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&brtcCd=\(encodeFirst)&numOfRows=999&pageSize=999&pageNo=1&startPage=1"))!)!
         parser.delegate = self
         parser.parse()
@@ -87,19 +85,20 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         secondLocationData = "\(listText)"
         print(secondLocationData)
+        self.performSegueWithIdentifier("nextView", sender: self)
     }
-    /*
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // 오류 아직 미해결...
-     // 데이터를 받은경우 그 데이터를 미세먼지 조회 레이블에 전달을 하게 하려 한다.
-     // 하지만 그방법이 제대로 구현되지 않는다.
-     
-     }
-     */
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "nextView"{
+            let param = segue.destinationViewController as! ThirdLocationTableViewController
+            
+            param.firstLocationData = firstLocationData
+            param.secondLocationData = secondLocationData
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("*" + firstLocationData)
         beginParsing()
     }
     

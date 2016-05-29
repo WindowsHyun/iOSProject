@@ -11,13 +11,13 @@ import UIKit
 class miniDustViewController: UIViewController {
 
     @IBOutlet var myLabel : UILabel!
-    var send = myLocation.FirstLocation
+    var firstLocationData = ""
+    var secondLocationData = ""
+    var thirdLocationData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("aaa-" + send)
-        myLabel.text = send
-
+        myLabel.text = firstLocationData + " " + secondLocationData + " " + thirdLocationData
         // Do any additional setup after loading the view.
     }
 

@@ -8,23 +8,31 @@
 
 import UIKit
 
-class LocationSearchTableViewController: UITableViewController, NSXMLParserDelegate {
-
+class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelegate {
+    
     @IBOutlet weak var tbData: UITableView!
     // xml 파일을 다운로드 및 파싱하는 오브젝트
     var parser = NSXMLParser()
     // feed 데이터를 저장하는 mutable array
     var posts = NSMutableArray()
     // title과 date 같은 feed데이터를 저장하는 mutable dictionary
-    
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
-    var firstLocation = ""
+    
+    var firstLocationData = ""
+    var secondLocationData = ""
+    var thirdLocationData = ""
+    var encodeFirst:String = ""
+    var encodeSecond:String = ""
+    
     
     func beginParsing(){
         posts = []
-        parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://openapi.epost.go.kr/postal/retrieveLotNumberAdressService/retrieveLotNumberAdressService/getBorodCityList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&numOfRows=999&pageSize=999&pageNo=1&startPage=1"))!)!
+        encodeFirst = UTF8Encode(firstLocationData)
+        encodeSecond = UTF8Encode(secondLocationData)
+
+        parser = NSXMLParser(contentsOfURL: (NSURL(string:"http://openapi.epost.go.kr/postal/retrieveLotNumberAdressService/retrieveLotNumberAdressService/getEupMyunDongList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&brtcCd=\(encodeFirst)&signguCd=\(encodeSecond)&numOfRows=999&pageSize=999&pageNo=1&startPage=1"))!)!
         parser.delegate = self
         parser.parse()
     }
@@ -32,8 +40,7 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     func parser(parser:NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?,
                 attributes attributeDict: [String : String]) {
         element = elementName
-        
-        if(elementName as NSString).isEqualToString("borodCity") // element 가 item이면 아래를 실행
+        if(elementName as NSString).isEqualToString("eupMyunDongList") // element 가 item이면 아래를 실행
         {
             elements = NSMutableDictionary()
             elements = [:]
@@ -43,16 +50,16 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     }
     
     func parser(parser: NSXMLParser!, foundCharacters string: String!){
-        if element.isEqualToString("brtcNm"){
+        if element.isEqualToString("emdCd"){
             title1.appendString(string)
         }
     }
     
     
     func parser(parser: NSXMLParser!, didEndElement elementName: String!,namespaceURI: String!, qualifiedName qName: String!){
-        if(elementName as NSString).isEqualToString("borodCity"){
+        if(elementName as NSString).isEqualToString("eupMyunDongList"){
             if !title1.isEqual(nil){
-                elements.setObject(title1, forKey: "brtcNm")
+                elements.setObject(title1, forKey: "emdCd")
             }
             posts.addObject(elements)
         }
@@ -68,38 +75,38 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("DataCell", forIndexPath: indexPath)
-        cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String
-
+        cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("emdCd") as! NSString as String
+        
         return cell
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath ){
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         //테이블뷰 선택이 되었을때 나타나는 행동
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
         let listText = "\(cell?.textLabel?.text as! NSString as String)"
         //print("선택한 위치는(List 선택 값) : \(listText)")
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
-        firstLocation = "\(listText)"
-        print(firstLocation)
-        self.performSegueWithIdentifier("nextView", sender: self)
-        
+        thirdLocationData = "\(listText)"
+        print("전체 선택 : " + firstLocationData + " " + secondLocationData + " " + thirdLocationData)
+        //self.performSegueWithIdentifier("nextView", sender: self)
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "nextView"{
-        let param = segue.destinationViewController as! SecondTableViewController
-        
-        param.firstLocationData = firstLocation
+            let param = segue.destinationViewController as! miniDustViewController
+            
+            param.firstLocationData = firstLocationData
+            param.secondLocationData = secondLocationData
+            param.thirdLocationData = thirdLocationData
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
