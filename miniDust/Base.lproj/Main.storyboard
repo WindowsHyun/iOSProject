@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+>>>>>>> origin/master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -51,8 +55,12 @@
                         <segue destination="oeL-9e-6o3" kind="relationship" relationship="viewControllers" id="eeq-Kp-ZTG"/>
                         <segue destination="50V-59-ENW" kind="relationship" relationship="viewControllers" id="M1B-dM-eEm"/>
                         <segue destination="8S1-8a-sLU" kind="relationship" relationship="viewControllers" id="2VF-Jk-rcY"/>
+<<<<<<< HEAD
                         <segue destination="CfG-mv-fbt" kind="relationship" relationship="viewControllers" id="Q4H-GY-RAM"/>
+=======
+>>>>>>> origin/master
                         <segue destination="wNz-wc-xCG" kind="relationship" relationship="viewControllers" id="nGw-vs-hhQ"/>
+                        <segue destination="CfG-mv-fbt" kind="relationship" relationship="viewControllers" id="Q4H-GY-RAM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNP-XT-Gul" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,13 +242,21 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재위치 : 경기도 시흥시 정왕동" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U47-rE-VWY">
                                 <rect key="frame" x="112" y="64" width="376" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+<<<<<<< HEAD
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+=======
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+>>>>>>> origin/master
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-05-29 06:16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdB-2i-uvA">
                                 <rect key="frame" x="215.5" y="115" width="169" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+<<<<<<< HEAD
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+=======
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+>>>>>>> origin/master
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
