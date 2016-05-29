@@ -8,8 +8,17 @@
 
 import Foundation
 
-struct myLocation {
-    static var FirstLocation = ""
+class MyLocation {
+    static let sharedInstance = MyLocation()
+    var FirstLocation: String
+    var SecondLocation: String
+    var ThirdLocation: String
+    
+    private init() {
+        self.FirstLocation = ""
+        self.SecondLocation = ""
+        self.ThirdLocation = ""
+    }
 }
 
 func UTF8Encode(name: String) -> String {

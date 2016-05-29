@@ -8,10 +8,7 @@
 
 import UIKit
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
 class LocationSearchTableViewController: UITableViewController, NSXMLParserDelegate {
 
     @IBOutlet weak var tbData: UITableView!
@@ -20,16 +17,14 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     // feed 데이터를 저장하는 mutable array
     var posts = NSMutableArray()
     // title과 date 같은 feed데이터를 저장하는 mutable dictionary
-    
+    let LocationData = MyLocation.sharedInstance
+    // 싱글톤으로 제작하여 모든 스위프트에서 단일 변수로 만들기
     var elements = NSMutableDictionary()
     var element = NSString()
     var title1 = NSMutableString()
     var firstLocation = ""
-<<<<<<< HEAD
     var aaa = SecondTableViewController()
 
-=======
->>>>>>> origin/master
     
     func beginParsing(){
         posts = []
@@ -91,6 +86,7 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         firstLocation = "\(listText)"
         print(firstLocation)
+        LocationData.FirstLocation = firstLocation
         self.performSegueWithIdentifier("nextView", sender: self)
         
     }

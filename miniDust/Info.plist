@@ -2,11 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<<<<<<< HEAD:miniDust/Info.plist
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App needs location servers for stuff.</string>
-=======
->>>>>>> origin/master:miniDust/Info.plist
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

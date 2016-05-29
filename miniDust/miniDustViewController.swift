@@ -11,13 +11,22 @@ import UIKit
 class miniDustViewController: UIViewController {
 
     @IBOutlet var myLabel : UILabel!
+    
+    var LocationData = MyLocation.sharedInstance
+    
     var firstLocationData = ""
     var secondLocationData = ""
     var thirdLocationData = ""
     
+    func update() {
+        // Something cool
+        myLabel.text = LocationData.FirstLocation + " " + LocationData.SecondLocation + " " + LocationData.ThirdLocation
+        print("언제 불러오나?")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        myLabel.text = firstLocationData + " " + secondLocationData + " " + thirdLocationData
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "update", userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
 
