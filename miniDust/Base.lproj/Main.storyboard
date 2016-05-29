@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZPI-EA-imY">
+>>>>>>> origin/master
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -35,7 +39,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjI-eK-wQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-1624" y="-1436"/>
+=======
+            <point key="canvasLocation" x="-764" y="46"/>
+>>>>>>> origin/master
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Awk-Il-UTp">
@@ -50,13 +58,20 @@
                     <connections>
                         <segue destination="oeL-9e-6o3" kind="relationship" relationship="viewControllers" id="eeq-Kp-ZTG"/>
                         <segue destination="8S1-8a-sLU" kind="relationship" relationship="viewControllers" id="2VF-Jk-rcY"/>
+<<<<<<< HEAD
                         <segue destination="CfG-mv-fbt" kind="relationship" relationship="viewControllers" id="Q4H-GY-RAM"/>
+=======
+>>>>>>> origin/master
                         <segue destination="wNz-wc-xCG" kind="relationship" relationship="viewControllers" id="nGw-vs-hhQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNP-XT-Gul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-1608" y="46"/>
+=======
+            <point key="canvasLocation" x="-1624" y="46"/>
+>>>>>>> origin/master
         </scene>
         <!--위치조회-->
         <scene sceneID="286-kh-SSv">
@@ -253,6 +268,7 @@
             </objects>
             <point key="canvasLocation" x="430" y="-715"/>
         </scene>
+<<<<<<< HEAD
         <!--지도-->
         <scene sceneID="xra-Cx-PpQ">
             <objects>
@@ -305,12 +321,17 @@
             </objects>
             <point key="canvasLocation" x="-802" y="46"/>
         </scene>
+=======
+>>>>>>> origin/master
     </scenes>
     <resources>
         <image name="Dust30x30.png" width="30" height="30"/>
         <image name="Info30x30.png" width="30" height="30"/>
         <image name="Infomation.png" width="768" height="1004"/>
+<<<<<<< HEAD
         <image name="Map-marker20x20.png" width="20" height="26"/>
+=======
+>>>>>>> origin/master
         <image name="Search20x20.png" width="20" height="20"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

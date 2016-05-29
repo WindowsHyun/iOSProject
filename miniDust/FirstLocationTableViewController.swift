@@ -8,7 +8,10 @@
 
 import UIKit
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 class LocationSearchTableViewController: UITableViewController, NSXMLParserDelegate {
 
     @IBOutlet weak var tbData: UITableView!
@@ -22,8 +25,11 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     var element = NSString()
     var title1 = NSMutableString()
     var firstLocation = ""
+<<<<<<< HEAD
     var aaa = SecondTableViewController()
 
+=======
+>>>>>>> origin/master
     
     func beginParsing(){
         posts = []

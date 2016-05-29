@@ -185,8 +185,11 @@
 		A1828E121CBCEF3E00D28198 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD:miniDust.xcodeproj/project.pbxproj
 				A1E321B41CFB04D30033816E /* CoreLocation.framework */,
 				A1E321B21CFB04CA0033816E /* MapKit.framework */,
+=======
+>>>>>>> origin/master:miniDust.xcodeproj/project.pbxproj
 				A1828E1D1CBCEF3E00D28198 /* miniDust */,
 				A1828E1C1CBCEF3E00D28198 /* Products */,
 			);

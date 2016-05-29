@@ -9,7 +9,10 @@
 import UIKit
 
 class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     
     @IBOutlet weak var tbData: UITableView!
     // xml 파일을 다운로드 및 파싱하는 오브젝트
@@ -25,7 +28,10 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
     var secondLocationData = ""
     var encodeFirst:String = ""
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     
     func beginParsing(){
         posts = []
