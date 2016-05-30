@@ -13,19 +13,23 @@ class MyLocation {
     var FirstLocation: String
     var SecondLocation: String
     var ThirdLocation: String
+    var NearLocation: String
     var WGS84_x :Double
     var WGS84_y :Double
     var TM_x : Double
     var TM_y : Double
+    var notAutoLocation : Bool
     
     private init() {
-        self.FirstLocation = "경기"
-        self.SecondLocation = "시흥시"
-        self.ThirdLocation = "정왕동"
+        self.FirstLocation = ""
+        self.SecondLocation = ""
+        self.ThirdLocation = ""
+        self.NearLocation = ""
         self.WGS84_x = 0.0
         self.WGS84_y = 0.0
         self.TM_x = 0.0
         self.TM_y = 0.0
+        self.notAutoLocation = false
     }
 }
 

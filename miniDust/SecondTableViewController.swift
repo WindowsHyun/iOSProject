@@ -89,7 +89,6 @@ class SecondTableViewController: UITableViewController, NSXMLParserDelegate {
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         secondLocationData = "\(listText)"
         print(secondLocationData)
-        LocationData.SecondLocation = secondLocationData
         self.performSegueWithIdentifier("nextView", sender: self)
     }
 

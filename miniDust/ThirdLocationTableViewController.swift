@@ -89,7 +89,10 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
         let listText = "\(cell?.textLabel?.text as! NSString as String)"
         thirdLocationData = "\(listText)"
         print("전체 선택 : " + firstLocationData + " " + secondLocationData + " " + thirdLocationData)
+        LocationData.FirstLocation = firstLocationData
+        LocationData.SecondLocation = secondLocationData
         LocationData.ThirdLocation = thirdLocationData
+        LocationData.notAutoLocation = true
     }
     
     

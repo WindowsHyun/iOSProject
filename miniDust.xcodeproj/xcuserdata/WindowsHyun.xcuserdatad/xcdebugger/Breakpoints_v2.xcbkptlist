@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "miniDust/FunctionData.swift"
-            timestampString = "486290386.128582"
+            timestampString = "486316518.765702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "parsingData"
             landmarkType = "3">
             <Locations>
