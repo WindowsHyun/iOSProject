@@ -46,7 +46,6 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
     //-----------------------------------------------------------------------------
     
     let LocationData = MyLocation.sharedInstance
-    let pm10Information = pm10Data.sharedInstance
     
     var encodeName:String = ""
     
