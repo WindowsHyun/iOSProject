@@ -11,6 +11,12 @@ import UIKit
 
 class miniDustViewController: UIViewController, NSXMLParserDelegate {
     
+    @IBOutlet weak var totalDust: UIImageView!
+    @IBOutlet weak var pm10Dust: UIImageView!
+    @IBOutlet weak var o3Dust: UIImageView!
+    @IBOutlet weak var no2Dust: UIImageView!
+    @IBOutlet weak var coDust: UIImageView!
+    @IBOutlet weak var so2Dust: UIImageView!
     @IBOutlet var myLocation : UILabel!
     @IBOutlet var nearLocation: UILabel!
     @IBOutlet var dataTime : UILabel!
@@ -106,7 +112,15 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var recData:String = WebParsing("https://apis.daum.net/local/geo/transcoord?apikey=d8807fd4a736291f4878c3cd37d8612d&fromCoord=WGS84&y=\(LocationData.WGS84_x)&x=\(LocationData.WGS84_y)&toCoord=TM&output=xml")
+        
+        totalDust.image = UIImage(named: ("bad.png"))
+        pm10Dust.image = UIImage(named: ("badbad.png"))
+        o3Dust.image = UIImage(named: ("good.png"))
+        no2Dust.image = UIImage(named: ("normal.png"))
+        coDust.image = UIImage(named: ("verygood.png"))
+        so2Dust.image = UIImage(named: ("good.png"))
+        
+        let recData:String = WebParsing("https://apis.daum.net/local/geo/transcoord?apikey=d8807fd4a736291f4878c3cd37d8612d&fromCoord=WGS84&y=\(LocationData.WGS84_x)&x=\(LocationData.WGS84_y)&toCoord=TM&output=xml")
         
         LocationData.TM_x = Double(SplitString(recData, first: "' y", last: "x='"))!
         LocationData.TM_y = Double(SplitString(recData, first: "' />", last: "y='"))!
