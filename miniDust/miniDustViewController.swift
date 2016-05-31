@@ -42,7 +42,6 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
     let LocationData = MyLocation.sharedInstance
     let GetParsing = parsingData()
     
-    
     func update() {
         // 실시간으로 위치조회의 데이터를 받아온다.
         myLocation.text = "현재 위치 : " + LocationData.FirstLocation + " " + LocationData.SecondLocation + " " + LocationData.ThirdLocation
@@ -67,7 +66,7 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
             siteURL = "http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getNearbyMsrstnList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&tmX=\(LocationData.TM_x)&tmY=\(LocationData.TM_y)&numOfRows=999&pageSize=999&pageNo=1&startPage=1"
             // TM좌표를 통해서 현재위치 에서 가장 가까운 측정소를 반환해준다.
             
-            let nearAir = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "stationName")
+            let nearAir = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "stationName", DataNum: 0)
             LocationData.NearLocation = String(nearAir)
             //---------------------------------------------------------------------------------------------------
         }else{
@@ -76,8 +75,8 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
             let selectLocation = "\(LocationData.FirstLocation) \(LocationData.SecondLocation) \(LocationData.ThirdLocation)"
             encodeName = UTF8Encode(selectLocation)
             siteURL = "https://apis.daum.net/local/geo/addr2coord?apikey=d8807fd4a736291f4878c3cd37d8612d&q=\(encodeName)&output%20=xml"
-            let ws_x = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "point_x")
-            let ws_y = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "point_y")
+            let ws_x = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "point_x", DataNum: 0)
+            let ws_y = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "point_y", DataNum: 0)
             // 해당 위치를 다음API를 이용하여 위경도를 가져온다.
             
             let recData:String = WebParsing("https://apis.daum.net/local/geo/transcoord?apikey=d8807fd4a736291f4878c3cd37d8612d&fromCoord=WGS84&y=\(ws_y)&x=\(ws_x)&toCoord=TM&output=xml")
@@ -86,7 +85,7 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
             // 다음API를 이용하여 TM 좌표계를 받아온다.
             
             siteURL = "http://openapi.airkorea.or.kr/openapi/services/rest/MsrstnInfoInqireSvc/getNearbyMsrstnList?ServiceKey=agRTEvpQv1bNvtoPQr3DNvE5juZ9EAws47JkmLbQnf4OYYAXw%2FAh9TULJtGxrEBzqH2767koxGlukyRTjweQcg%3D%3D&tmX=\(LocationData.TM_x)&tmY=\(LocationData.TM_y)&numOfRows=999&pageSize=999&pageNo=1&startPage=1"
-            let nearAir = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "stationName")
+            let nearAir = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "stationName", DataNum: 0)
             LocationData.NearLocation = String(nearAir)
             // TM좌표를 통해서 현재위치 에서 가장 가까운 측정소를 반환해준다.
             //---------------------------------------------------------------------------------------------------
@@ -98,27 +97,56 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
         encodeName = UTF8Encode(LocationData.NearLocation)
         siteURL = "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?ServiceKey=0XhuR6MWTmnuwV8IZ3UntOteG%2BqKHXdHVDCtFHQu3Y67n4Wwwuc6zCOj%2Bk0TrBN6bvqswhm2BtIvs6sP8%2FQruA%3D%3D&numOfRows=10&pageSize=10&pageNo=1&startPage=1&stationName=\(encodeName)&dataTerm=DAILY"
         // 파싱을 하기위한 URL등을 미리 입력해주어 중복된 값들을 하나로 통일 시킨다.
-        dataTime.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "dataTime")
-        khailValue.text = "통합지수 : " + GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "khaiValue") + String("㎍/㎥")
-        pm10Value24Data.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "pm10Value") + String("㎍/㎥")
-        o3Value.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "o3Value") + String("ppm")
-        no2Value.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "no2Value") + String("ppm")
-        coValue.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "coValue") + String("ppm")
-        so2Value.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "so2Value") + String("ppm")
+        dataTime.text = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "dataTime", DataNum: 0)
+        let khailValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "khaiValue", DataNum: 0)
+        let pm10ValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "pm10Value", DataNum: 0)
+        let o3ValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "o3Value", DataNum: 0)
+        let no2ValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "no2Value", DataNum: 0)
+        let coValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "coValue", DataNum: 0)
+        let so2ValueData = GetParsing.beginParsing(siteURL, motherData: "item", ChildData: "so2Value", DataNum: 0)
+        
+        khailValue.text = "통합지수 : " + khailValueData + String("㎍/㎥")
+        totalDust.image = UIImage(named: (imageName("khaiValue", value: Double(khailValueData)!) + ".png"))
+
+        let rgbvalue:Int = Int(imageName("khaiValue", value: Double(khailValueData)!))!
+        if (rgbvalue == 0){
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 0.14, green: 0.69, blue: 0.96, alpha: 1)
+        }
+        if (rgbvalue == 1){
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 0.03, green: 0.85, blue: 0.03, alpha: 1)
+        }
+        if (rgbvalue == 2){
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0.32, blue: 0, alpha: 1)
+        }
+        if (rgbvalue == 3){
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 0.93, green: 0.28, blue: 0.28, alpha: 1)
+        }
+        if (rgbvalue == 4){
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 1)
+        }
+        // 아 벡터로 받아와서 하려다가 그냥 수작업...
+        
+        
+        pm10Value24Data.text = pm10ValueData + String("㎍/㎥")
+        pm10Dust.image = UIImage(named: (imageName("pm10Value24", value: Double(pm10ValueData)!) + ".png"))
+        
+        o3Value.text = o3ValueData + String("ppm")
+        o3Dust.image = UIImage(named: (imageName("o3Value", value: Double(o3ValueData)!) + ".png"))
+        
+        no2Value.text = no2ValueData + String("ppm")
+        no2Dust.image = UIImage(named: (imageName("no2Value", value: Double(no2ValueData)!) + ".png"))
+        
+        coValue.text = coValueData + String("ppm")
+        coDust.image = UIImage(named: (imageName("coValue", value: Double(coValueData)!) + ".png"))
+        
+        so2Value.text = so2ValueData + String("ppm")
+        so2Dust.image = UIImage(named: (imageName("so2Value", value: Double(so2ValueData)!) + ".png"))
         print("파싱 데이터를 뿌림.")
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        totalDust.image = UIImage(named: ("bad.png"))
-        pm10Dust.image = UIImage(named: ("badbad.png"))
-        o3Dust.image = UIImage(named: ("good.png"))
-        no2Dust.image = UIImage(named: ("normal.png"))
-        coDust.image = UIImage(named: ("verygood.png"))
-        so2Dust.image = UIImage(named: ("good.png"))
         
         let recData:String = WebParsing("https://apis.daum.net/local/geo/transcoord?apikey=d8807fd4a736291f4878c3cd37d8612d&fromCoord=WGS84&y=\(LocationData.WGS84_x)&x=\(LocationData.WGS84_y)&toCoord=TM&output=xml")
         
@@ -129,7 +157,6 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "update", userInfo: nil, repeats: true)
         let pm10Timer = NSTimer.scheduledTimerWithTimeInterval(3600.0, target: self, selector: "pm10Update", userInfo: nil, repeats: true)
         pm10Update()
-        //print(String(LocationData.WGS84_x) + String(", ") + String(LocationData.WGS84_y))
         
     }
     

@@ -47,7 +47,7 @@ class parsingData: NSObject, NSXMLParserDelegate{
     var ChildValue: String = ""
     var returnData:String = ""
     
-    func beginParsing(url : String, motherData : String, ChildData : String) -> String{
+    func beginParsing(url : String, motherData : String, ChildData : String, DataNum : Int) -> String{
         posts = []
         motherValue = motherData
         ChildValue = ChildData
@@ -55,7 +55,7 @@ class parsingData: NSObject, NSXMLParserDelegate{
         parser.delegate = self
         parser.parse()
         if ( posts.count != 0){
-            returnData = posts.objectAtIndex(0).valueForKey(ChildValue) as! NSString as String
+            returnData = posts.objectAtIndex(DataNum).valueForKey(ChildValue) as! NSString as String
             returnData = returnData.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
             return returnData
         }else{
@@ -141,4 +141,80 @@ func WebParsing(url : String) -> String {
 
 func UTF8Encode(name: String) -> String {
     return name.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+}
+
+
+func returnRGB(value: Int)-> Array<Int>{
+    var rgbList = []
+    if (value == 0){
+        rgbList = [0, 162, 232]
+    }
+    if (value == 1){
+        rgbList = [34, 177, 76]
+    }
+    if (value == 2){
+        rgbList = [255, 127, 39]
+    }
+    if (value == 3){
+        rgbList = [207, 78, 78]
+    }
+    if (value == 4){
+        rgbList = [255, 0, 0]
+    }
+    
+    return rgbList as! Array<Int>
+}
+
+
+func imageName(selectData : String, value: Double)-> String{
+    var khaiValue = [0, 50, 100, 210, 250, 999]
+    var pm10Value24 = [0, 30, 80, 110, 150, 999]
+    var o3Value = [0, 0.03, 0.09, 0.11, 0.15, 999]
+    var no2Value = [0, 0.03, 0.06, 0.1, 0.2, 999]
+    var coValue = [0, 2, 9, 11, 15, 999]
+    var so2Value = [0, 0.02, 0.05, 0.11, 0.15, 999]
+    
+    for var index = 0; index < 5; index += 1 {
+        if (selectData == "khaiValue"){
+            if ( Double(khaiValue[index]) <= Double(value) && Double(value) <= Double(khaiValue[index+1]) ){
+                return String(index)
+            }
+        }
+        if (selectData == "pm10Value24"){
+            if ( Double(pm10Value24[index]) <= Double(value) && Double(value) <= Double(pm10Value24[index+1]) ){
+                return String(index)
+            }
+        }
+        if (selectData == "o3Value"){
+            if ( Double(o3Value[index]) <= Double(value) && Double(value) <= Double(o3Value[index+1]) ){
+                return String(index)
+            }
+        }
+        if (selectData == "no2Value"){
+            if ( Double(no2Value[index]) <= Double(value) && Double(value) <= Double(no2Value[index+1]) ){
+                return String(index)
+            }
+        }
+        if (selectData == "coValue"){
+            if ( Double(coValue[index]) <= Double(value) && Double(value) <= Double(coValue[index+1]) ){
+                return String(index)
+            }
+        }
+        if (selectData == "so2Value"){
+            if ( Double(so2Value[index]) <= Double(value) && Double(value) <= Double(so2Value[index+1]) ){
+                return String(index)
+            }
+        }
+        
+    }
+    
+    return "0.png"
+}
+
+extension String
+{
+    func replace(target: String, withString: String) -> String
+    {
+        return self.stringByReplacingOccurrencesOfString(target, withString: withString, options: NSStringCompareOptions.LiteralSearch, range: nil)
+    }
 }
