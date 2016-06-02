@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0F3F131CFFFDEE00B4D95C /* chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0F3F121CFFFDEE00B4D95C /* chart.png */; };
 		7C4BCFCB1CFDE2F30014FA88 /* PM10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4BCFCA1CFDE2F30014FA88 /* PM10ViewController.swift */; };
 		7C4BCFD31CFDF8330014FA88 /* State.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C4BCFD21CFDF8330014FA88 /* State.png */; };
 		7C5233451CFAB6C70016D217 /* ThirdLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5233441CFAB6C70016D217 /* ThirdLocationTableViewController.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0F3F121CFFFDEE00B4D95C /* chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chart.png; sourceTree = "<group>"; };
 		7C4BCFCA1CFDE2F30014FA88 /* PM10ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PM10ViewController.swift; sourceTree = "<group>"; };
 		7C4BCFD21CFDF8330014FA88 /* State.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = State.png; sourceTree = "<group>"; };
 		7C5233441CFAB6C70016D217 /* ThirdLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdLocationTableViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		A1828E1D1CBCEF3E00D28198 /* miniDust */ = {
 			isa = PBXGroup;
 			children = (
+				7C0F3F121CFFFDEE00B4D95C /* chart.png */,
 				A122C9771CEF647E0001705C /* Image */,
 				A1828E1E1CBCEF3E00D28198 /* AppDelegate.swift */,
 				A1828E201CBCEF3E00D28198 /* ViewController.swift */,
@@ -276,6 +279,7 @@
 				A122C9981CEF7BC00001705C /* Home30x30.png in Resources */,
 				A122C9931CEF7BC00001705C /* Align20x20.png in Resources */,
 				A122C99B1CEF7BC00001705C /* Search20x20.png in Resources */,
+				7C0F3F131CFFFDEE00B4D95C /* chart.png in Resources */,
 				A13AE96F1CEF7F4C00DDAF00 /* Infomation.png in Resources */,
 				A122C99C1CEF7BC00001705C /* Search30x30.png in Resources */,
 				A11808EB1CEF8D7200FFA3EA /* Dust20x20.png in Resources */,

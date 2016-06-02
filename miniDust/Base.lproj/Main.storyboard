@@ -19,17 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Infomation.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-7L-mXg">
-                                <rect key="frame" x="0.0" y="10" width="600" height="580"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qr8-7L-mXg">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qr8-7L-mXg" secondAttribute="trailing" constant="-20" id="57l-LC-p0y"/>
-                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="centerY" secondItem="vQp-hI-TuX" secondAttribute="centerY" id="Kwv-k7-zbE"/>
-                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="leading" secondItem="vQp-hI-TuX" secondAttribute="leadingMargin" constant="-20" id="OQj-bL-ksX"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Qr8-7L-mXg" secondAttribute="bottom" constant="10" id="UbN-NZ-1ck"/>
-                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="top" secondItem="vQp-hI-TuX" secondAttribute="topMargin" constant="10" id="dF0-jU-Ug5"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="bottom" secondItem="iI7-Fj-dgC" secondAttribute="top" id="CIt-GX-WtT"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="leading" secondItem="vQp-hI-TuX" secondAttribute="leading" id="Duo-36-OeL"/>
+                            <constraint firstAttribute="trailing" secondItem="Qr8-7L-mXg" secondAttribute="trailing" id="lXC-Qr-SHA"/>
+                            <constraint firstItem="Qr8-7L-mXg" firstAttribute="top" secondItem="0Hw-AR-sQL" secondAttribute="bottom" id="zFR-yv-e3j"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="정보" image="Info30x30.png" id="SYA-qf-Cfs"/>
@@ -953,10 +952,10 @@
         <image name="Align30x30.png" width="30" height="29"/>
         <image name="Dust30x30.png" width="30" height="30"/>
         <image name="Info30x30.png" width="30" height="30"/>
-        <image name="Infomation.png" width="768" height="1004"/>
         <image name="Map-marker20x20.png" width="20" height="26"/>
         <image name="Search30x30.png" width="30" height="30"/>
         <image name="State.png" width="674" height="55"/>
+        <image name="chart.png" width="600" height="531"/>
     </resources>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
