@@ -47,6 +47,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         self.locationManager.stopUpdatingLocation()
         
+        let locationData = MyLocation.sharedInstance
+        
+        locationData.WGS84_x = region.center.latitude
+        locationData.WGS84_y = region.center.longitude
+        
+        //print(locationData.WGS84_x)
+        //print(locationData.WGS84_y)
         //print("%@", region.center)
     }
     

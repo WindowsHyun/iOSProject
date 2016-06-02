@@ -86,7 +86,6 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
         //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         firstLocation = "\(listText)"
         print(firstLocation)
-        LocationData.FirstLocation = firstLocation
         self.performSegueWithIdentifier("nextView", sender: self)
         
     }

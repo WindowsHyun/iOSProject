@@ -26,6 +26,7 @@
 + [대기오염정보 조회 서비스](https://www.data.go.kr/subMain.jsp#/L3B1YnIvdXNlL3ByaS9Jcm9zT3BlbkFwaURldGFpbC9vcGVuQXBpTGlzdFBhZ2UkQF4wMTJtMjEkQF5wdWJsaWNEYXRhUGs9MTUwMDA1ODEkQF5icm1DZD1PQzAwMTIkQF5tYWluRmxhZz10cnVl) - 각 측정소별 대기오염정보를 조회하기 위한 서비스로 기간별, 시도별 대기오염 정보와 민감군 이상 측정소 내역, 미세먼지 예보 통보 내역을 조회할 수 있다.
 + [측정소정보 조회 서비스   ](https://www.data.go.kr/subMain.jsp?param=T1BFTkFQSUAxNTAwMDY2MA==#/L3B1YnIvdXNlL3ByaS9Jcm9zT3BlbkFwaURldGFpbC9vcGVuQXBpTGlzdFBhZ2UkQF4wMTJtMSRAXnB1YmxpY0RhdGFQaz0xNTAwMDY2MCRAXmJybUNkPU9DMDAxMiRAXnJlcXVlc3RDb3VudD00MzYkQF5vcmdJbmRleD1PUEVOQVBJ) - 대기질 측정소 정보를 조회하기 위한 서비스로 TM 좌표기반의 가까운 측정소 및 측정소 목록과 측정소의 정보를 조회할 수 있다.
 + [지번주소조회 서비스](https://www.data.go.kr/subMain.jsp#/L3B1YnIvdXNlL3ByaS9Jcm9zT3BlbkFwaURldGFpbC9vcGVuQXBpTGlzdFBhZ2UkQF4wMTJtMjEkQF5wdWJsaWNEYXRhUGs9MTUwMDAyNjgkQF5icm1DZD1PQzAwMTEkQF5tYWluRmxhZz10cnVl) - 우정사업본부에서는 현재 운영되고 있는 지번주소체계의 새우편번호(2015.8.1 시행) 및 기존우편번호를 조회하는 기능을 제공합니다.
++ [좌표계 변환, 좌표->현재위치](https://developers.daum.net/services/apis/local/geo/transcoord) - 좌표계 변환API는 입력한 좌표를 다른 좌표계의 좌표, 좌표→주소 변환API는 좌표를 입력하면 그에 해당하는 주소로 변경시킬 수 있습니다. XML, JSON(P) 형식으로 결과를 반환합니다.
 
 ---------
 구현 예정 내용

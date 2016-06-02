@@ -87,13 +87,15 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
         //테이블뷰 선택이 되었을때 나타나는 행동
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
         let listText = "\(cell?.textLabel?.text as! NSString as String)"
-        //print("선택한 위치는(List 선택 값) : \(listText)")
-        //print("선택한 위치는(파싱 List 값) : \(posts.objectAtIndex(indexPath.row).valueForKey("brtcNm") as! NSString as String)")
         thirdLocationData = "\(listText)"
         print("전체 선택 : " + firstLocationData + " " + secondLocationData + " " + thirdLocationData)
+        LocationData.FirstLocation = firstLocationData
+        LocationData.SecondLocation = secondLocationData
         LocationData.ThirdLocation = thirdLocationData
-        //self.performSegueWithIdentifier("nextView", sender: self)
+        LocationData.notAutoLocation = true
     }
+    
+    
 /*
      싱글톤 함수로 인하여 segue가 필요 없어짐.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -106,6 +108,8 @@ class ThirdLocationTableViewController: UITableViewController, NSXMLParserDelega
         }
     }
   */
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
