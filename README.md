@@ -65,6 +65,7 @@
 Youtube 업로드 영상 & PPT 자료
 ---------
 + [1차 발표 PPT](https://github.com/WindowsHyun/iOSProject/blob/master/Document/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%201%EC%B0%A8%20%EB%B0%9C%ED%91%9C.pptx?raw=true) / [1차 발표 영상](https://www.youtube.com/watch?v=7T7QmmTkiYM&feature=youtu.be)
++ [2차 발표 PPT](https://github.com/WindowsHyun/iOSProject/blob/master/Document/%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EA%B2%8C%EC%9E%84%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%202%EC%B0%A8%20%EB%B0%9C%ED%91%9C.pptx?raw=true) / [2차 발표 영상](https://www.youtube.com/watch?v=87TNLEW7F-8&feature=youtu.be)
 
 ---------
 참고사항
