@@ -116,10 +116,10 @@ class miniDustViewController: UIViewController, NSXMLParserDelegate {
             self.view.backgroundColor = UIColor.init(colorLiteralRed: 0.03, green: 0.85, blue: 0.03, alpha: 1)
         }
         if (rgbvalue == 2){
-            self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0.32, blue: 0, alpha: 1)
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0.85, blue: 0, alpha: 1)
         }
         if (rgbvalue == 3){
-            self.view.backgroundColor = UIColor.init(colorLiteralRed: 0.93, green: 0.28, blue: 0.28, alpha: 1)
+            self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0.32, blue: 0, alpha: 1)
         }
         if (rgbvalue == 4){
             self.view.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 1)
