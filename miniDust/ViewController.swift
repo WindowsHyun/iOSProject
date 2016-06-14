@@ -26,6 +26,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         
+        //경고창
+        let alert = UIAlertView()
+        alert.title = "사용법"
+        alert.message = "아래의 '미세먼지 예보'탭에서 \n현재 위치를 기준으로 미세먼지 정보를 \n확인할 수 있습니다."
+        alert.addButtonWithTitle("확인")
+        alert.show()
     }
     
     

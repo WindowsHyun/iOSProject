@@ -102,6 +102,12 @@ class LocationSearchTableViewController: UITableViewController, NSXMLParserDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
+        
+        let alert = UIAlertView()
+        alert.title = "사용법"
+        alert.message = "동,읍,면 지역 선택 후\n아래의 '미세먼지 예보'탭에서 \n갱신 버튼을 눌러야 정보가 갱신됩니다."
+        alert.addButtonWithTitle("확인")
+        alert.show()
     }
 
     override func didReceiveMemoryWarning() {
